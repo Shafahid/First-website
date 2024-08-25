@@ -36,16 +36,23 @@ body {
     /* margin: TOP RIGHT BOTTOM LEFT */
 }
 
+.logo:hover {
+    color:rgb(246, 200, 100);
+}
 .navbar {
     margin:  29px 50px 0px 0px;
 }
 
 .navbar a{
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     color:azure;
     margin-left: 30px;
     text-decoration: none;
+}
+
+.navbar a:hover {
+    color:aqua;
 }
 
 .container {
