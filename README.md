@@ -1,2 +1,2 @@
-<h1>Weather Web APP</h1>
+<h1>Weather Web App</h1>
 <p>Link: https://shafahid.github.io/First-website </p>
