@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/back.jpg');
+    background-size: cover;
+    background-position: center;  
+}
+
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    margin:  22px 0px 0px 50px;
+    /* margin: TOP RIGHT BOTTOM LEFT */
+}
+
+.navbar {
+    margin:  29px 50px 0px 0px;
+}
+
+.navbar a{
+    font-size: 18px;
+    font-weight: 300;
+    color:azure;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    color:aliceblue;
+    transition: height 0.6s ease;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i{
+    position: absolute;
+    left: 10px;
+    font-size: 25px;
+}
+
+.search-box input {
+    position: absolute;
+    width:100%;
+    height:100%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color:aliceblue;
+    font-weight: 400;
+    padding: 0 48px 0 42px;
+}
+
+.search-box input::placeholder {
+    color: aliceblue;
+    text-transform: capitalize;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    outline: none;
+    font-size: 25px;
+    color: aliceblue;
+    padding: 0 40px 0 5px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.search-box button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.4s ease;
+}
+
+.weather-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.weather-box,
+.weather-details,
+.not-found {
+    visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active {
+    visibility: visible;
+}
+
+.weather-box img {
+    width: 42%;
+}
+
+.weather-box .temperature {
+    position: relative;
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 500;
+    margin: 20px 0 6px -30px;
+}
+
+.weather-box .temperature span {
+    position: absolute;
+    font-size: 24px;
+    margin-left: 6px;
+}
+
+.weather-box .description {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width:100%;
+    padding: 0 20px;
+    display: flex;
+}
+
+
+.weather-details .humidity, 
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i {
+    font-size: 50px;
+    margin-right: 10px; 
+}
+
+.weather-details span {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;    
+}
+
+.weather-details p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.not-found {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.not-found img {
+    width: 50%;
+}
+
+.not-found p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
